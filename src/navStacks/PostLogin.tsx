@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import LoginScreen from '@screens/Login';
+import { DailyFeed } from '@screens/index';
 
 interface Props {};
 const Stack = createStackNavigator();
@@ -13,7 +13,7 @@ const PostLoginNavStack: FC<Props> = () : JSX.Element => {
         headerShown: false 
       }}
     >
-      <Stack.Screen name='LoginScreen' component={LoginScreen} />
+      <Stack.Screen name='DailyFeed' component={DailyFeed} />
     </Stack.Navigator>
   );
 };
