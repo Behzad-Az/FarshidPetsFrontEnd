@@ -7,7 +7,7 @@
 
 import React from 'react';
 import type {PropsWithChildren} from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { Provider } from 'react-redux';
 import {
   SafeAreaView,
   ScrollView,
@@ -25,7 +25,8 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import AppNavStack from '@navStacks/AppStack';
+import { store } from './src/store/store';
+import AppNavStack from '@navStacks/AppNavStack';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -64,8 +65,10 @@ function App(): JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
   return (
-    <AppNavStack />
-  )
+    <Provider store={store}>
+      <AppNavStack />
+    </Provider>
+  );
 
 
   return (

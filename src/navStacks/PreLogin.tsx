@@ -1,9 +1,8 @@
 import React, { FC } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-// import LoginScreen from '@screens/Login';
 import {
-  LoginScreen,
-  RegisterScreen
+  Login,
+  Register
 } from '@screens/index'
 
 interface Props {};
@@ -17,8 +16,8 @@ const PreLoginNavStack: FC<Props> = () : JSX.Element => {
         headerShown: false 
       }}
     >
-      <Stack.Screen name='LoginScreen' component={LoginScreen} />
-      <Stack.Screen name='RegisterScreen' component={RegisterScreen} />
+      <Stack.Screen name='Login' component={Login} />
+      <Stack.Screen name='Register' component={Register} />
     </Stack.Navigator>
   );
 };

@@ -10,11 +10,11 @@ interface Props {
   navigation: any
 }
 
-const LoginScreen: FC<Props> = ({ navigation }) : JSX.Element => {
+const Register: FC<Props> = ({ navigation }) : JSX.Element => {
   return (
     <View style={styles.mainContainer}>
-      <Text>RegisterScreen</Text>
-      <Pressable onPress={() => navigation.navigate('LoginScreen')}>
+      <Text>Register Screen</Text>
+      <Pressable onPress={() => navigation.navigate('Login')}>
         <Text>Go to Login</Text>
       </Pressable>
     </View>
@@ -30,4 +30,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default LoginScreen;
+export default Register;
