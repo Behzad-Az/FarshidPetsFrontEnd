@@ -6,16 +6,19 @@ import {
   Pressable
 } from 'react-native';
 
+import { useAppSelector } from '@store/store';
+
 interface Props {
   navigation: any
 }
 
 const DailyFeed: FC<Props> = ({ navigation }) : JSX.Element => {
+  const { navStack } = useAppSelector(state => state.appManagerReducer).appLoadStatus;
   return (
     <View style={styles.mainContainer}>
       <Text>Daily Feed</Text>
       <Pressable onPress={() => null}>
-        <Text>TBD</Text>
+        <Text>{navStack}</Text>
       </Pressable>
     </View>
   );
